@@ -1,0 +1,15 @@
+
+west
+come
+climb
+freed
+slave
+rescu
+rais
+find
+help
+track
+fall
+found
+recount
+transform
