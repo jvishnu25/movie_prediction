@@ -8,6 +8,7 @@ import re
 import os
 from tqdm import tqdm
 import joblib
+from tkinter import *
 
 def clear_folders(my_path):
     if len(os.listdir(my_path) ) == 0:
@@ -335,7 +336,7 @@ y = np.array(y)
 classifier.fit(X, y)
 
 # predict
-predictions = classifier.predict(X[1])
+predictions = classifier.predict(X[3])
 
 pred = predictions.toarray()
 result = list(np.where(pred == 1)[1])
@@ -417,7 +418,10 @@ y_pred= classifier.predict(X)
 pred = y_pred.toarray()
 result = list(np.where(pred == 1)[1])
 print('\n\nPrediction:')
+filename = "output_1.txt"  ####
+fo=open(filename,"w+")
 for r in result:
     print('\t*',my_genres[r])
+    fo.writelines(my_genres[r])
 
 
